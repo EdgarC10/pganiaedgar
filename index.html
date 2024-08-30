@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deportes en Acción</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+        /* Efecto de zoom en imágenes */
+        .card-img-top {
+            transition: transform 0.3s ease-in-out;
+        }
+        .card-img-top:hover {
+            transform: scale(1.1);
+        }
+
+        /* Efecto de sombra en las tarjetas */
+        .card {
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Efecto de fondo parallax en la galería */
+        #galeria {
+            background: url('images/parallax-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        #galeria .card {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Animación de entrada en el encabezado */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .jumbotron {
+            animation: slideIn 1s ease-out;
+        }
+
+        /* Transición suave en el menú de navegación */
+        .navbar-nav .nav-link {
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffcc00;
+        }
+
+        /* Efecto de desplazamiento suave para las anclas */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Deportes en Acción</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#noticias">Noticias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#equipos">Equipos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#resultados">Resultados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#galeria">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="jumbotron text-center text-white bg-primary">
+        <h1 class="display-4">Bienvenido a Deportes en Acción</h1>
+        <p class="lead">Todo lo que necesitas saber sobre deportes en un solo lugar.</p>
+        <a href="#" class="btn btn-light btn-lg">Explorar más</a>
+    </header>
+
+    <!-- Noticias -->
+    <section id="noticias" class="container mt-5">
+        <h2 class="text-center mb-4">Últimas Noticias</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="images/1.jpg" class="card-img-top" alt="Noticia 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Título de la Noticia 1</h5>
+                        <p class="card-text">Descripción breve de la noticia.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="images/2.jpg" class="card-img-top" alt="Noticia 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Título de la Noticia 2</h5>
+                        <p class="card-text">Descripción breve de la noticia.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="images/3.jpg" class="card-img-top" alt="Noticia 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Título de la Noticia 3</h5>
+                        <p class="card-text">Descripción breve de la noticia.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipos -->
+    <section id="equipos" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Equipos Destacados</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="images/4.jpg" class="card-img-top" alt="Equipo 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Equipo 1</h5>
+                            <p class="card-text">Descripción del equipo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="images/5.jpg" class="card-img-top" alt="Equipo 2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Equipo 2</h5>
+                            <p class="card-text">Descripción del equipo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="images/6.jpg" class="card-img-top" alt="Equipo 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Equipo 3</h5>
+                            <p class="card-text">Descripción del equipo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="images/7.jpg" class="card-img-top" alt="Equipo 4">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Equipo 4</h5>
+                            <p class="card-text">Descripción del equipo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resultados -->
+    <section id="resultados" class="container py-5">
+        <h2 class="text-center mb-4">Resultados Recientes</h2>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Partido</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>28/08/2024</td>
+                        <td>Equipo A vs Equipo B</td>
+                        <td>2 - 1</td>
+                    </tr>
+                    <tr>
+                        <td>27/08/2024</td>
+                        <td>Equipo C vs Equipo D</td>
+                        <td>1 - 1</td>
+                    </tr>
+                    <tr>
+                        <td>26/08/2024</td>
+                        <td>Equipo E vs Equipo F</td>
+                        <td>3 - 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Galería de Fotos</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="images/8.jpg" class="card-img-top"
+                        <img src="images/8.jpg" class="card-img-top" alt="Galería 1">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="images/9.jpg" class="card-img-top" alt="Galería 2">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="images/10.jpg" class="card-img-top" alt="Galería 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="container py-5">
+        <h2 class="text-center mb-4">Contáctanos</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" rows="5" placeholder="Tu mensaje"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-center">Información de Contacto</h3>
+                <ul class="list-unstyled text-center mt-4">
+                    <li><strong>Teléfono:</strong> +123 456 7890</li>
+                    <li><strong>Email:</strong> contacto@deportesaccion.com</li>
+                    <li><strong>Dirección:</strong> Calle Falsa 123, Ciudad Deportiva, País</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Deportes en Acción. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
